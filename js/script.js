@@ -1,11 +1,33 @@
 const submit = document.getElementById("btn_bmi");
 submit.addEventListener("click", function (event) {
 	event.preventDefault();
+	const jk = document.querySelector(`input[name="jk"]:checked`);
 	const bb = document.getElementById("bb").value;
 	const usia = document.getElementById("usia").value;
-	const tb = document.getElementById("tb").value / 100;
-	const bmi = bb / tb ** 2;
+	const tb = document.getElementById("tb").value;
+	if (!jk) {
+		window.alert("Pilih Jenis Kelamin Anda Terlebih Dahulu");
+		return;
+	}
+	if (bb === "") {
+		window.alert("Isikan Berat Badan Anda Terlebih Dahulu");
+		return;
+	}
+	if (usia === "") {
+		window.alert("Isikan Usia Anda Terlebih Dahulu");
+		return;
+	}
+	if (tb === "") {
+		window.alert("Isikan Tinggi Badan Anda Terlebih Dahulu");
+		return;
+	}
+	const bmi = bb / (tb / 100) ** 2;
 	const fixBmi = bmi.toFixed(1);
+
+	const kalkulator = document.getElementById("kalkulator");
+	kalkulator.style.display = "none";
+	const fitur = document.getElementById("fitur");
+	fitur.style.display = "none";
 
 	const hasil = document.getElementById("hasil");
 	const titleKalkulator = document.getElementById("title-kalkulator");
@@ -73,7 +95,6 @@ print.addEventListener("click", function () {
 	const btnPenyakit = document.getElementById("button-penyakit");
 	const footer = document.getElementById("footer");
 	penjelasanHeader.style.display = "none";
-	fitur.style.display = "none";
 	btnDownload.style.display = "none";
 	btnPenjelasan.style.display = "none";
 	btnPenyakit.style.display = "none";
@@ -81,7 +102,6 @@ print.addEventListener("click", function () {
 	window.print();
 	setTimeout(function () {
 		penjelasanHeader.style.display = "block";
-		fitur.style.display = "flex";
 		btnDownload.style.display = "inline-block";
 		btnPenjelasan.style.display = "block";
 		btnPenyakit.style.display = "block";

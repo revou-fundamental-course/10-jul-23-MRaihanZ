@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="assets/css/index.css" />
+		<link rel="stylesheet" href="css/index.css" />
 		<title>Kalkulator BMI</title>
 	</head>
 	<body>
@@ -17,22 +17,22 @@
 			</p>
 		</header>
 		<main>
-			<section class="kalkulator">
+			<section id="kalkulator" class="kalkulator">
 				<form action="/">
 					<div class="jenis-kelamin">
 						<p>Jenis Kelamin</p>
-						<input id="pria" name="jk" type="radio" value="pria" />
+						<input id="pria" name="jk" type="radio" value="pria" required />
 						<label for="pria">Pria</label>
-						<input id="wanita" name="jk" type="radio" value="wanita" />
+						<input id="wanita" name="jk" type="radio" value="wanita" required />
 						<label for="wanita">Wanita</label>
 					</div>
 					<div class="main">
 						<label for="bb">Berat Badan (kg)</label>
-						<input id="bb" name="bb" type="number" />
+						<input id="bb" name="bb" type="number" required />
 						<label for="usia">Usia (tahun)</label>
-						<input id="usia" name="usia" type="number" />
+						<input id="usia" name="usia" type="number" required />
 						<label for="tb">Tinggi badan (cm)</label>
-						<input id="tb" name="tb" type="number" />
+						<input id="tb" name="tb" type="number" required />
 					</div>
 					<div class="submit">
 						<button id="btn_bmi" name="btn" type="button">Hitung BMI</button>
@@ -114,6 +114,6 @@
 				<img src="assets/img/as_badge.svg" alt="App Store" />
 			</div>
 		</footer>
-		<script src="assets/js/script.js"></script>
+		<script src="js/script.js"></script>
 	</body>
 </html>
