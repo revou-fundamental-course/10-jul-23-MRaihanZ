@@ -1,0 +1,146 @@
+body {
+	margin: 0 20px;
+	padding: 0;
+}
+
+header {
+	text-align: center;
+}
+
+.kalkulator {
+	display: flex;
+	justify-content: center;
+}
+
+.kalkulator form {
+	padding: 2rem 7rem;
+	background-color: whitesmoke;
+}
+
+.kalkulator .jenis-kelamin {
+	margin-bottom: 10px;
+}
+
+.kalkulator .jenis-kelamin input {
+	margin: 0;
+}
+
+.kalkulator .jenis-kelamin p {
+	margin: 0 0 5px 0;
+}
+
+.kalkulator .main {
+	display: flex;
+	flex-direction: column;
+}
+
+.kalkulator .main input {
+	margin-bottom: 1rem;
+}
+
+.fitur {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.fitur .keunggulan {
+	flex: 10%;
+}
+
+.fitur .deskripsi {
+	flex: 60%;
+	text-align: justify;
+}
+
+button {
+	padding: 10px 20px;
+	background-color: deepskyblue;
+	color: white;
+	border: 0;
+	border-radius: 5px;
+}
+
+button:hover {
+	background-color: #5cc0de;
+	cursor: pointer;
+}
+
+.hasil {
+	display: none;
+	margin: 20px 0;
+}
+
+.hasil .hasil-kalkulator-container {
+	display: flex;
+	justify-content: center;
+}
+
+.hasil .hasil-kalkulator-container .hasil-kalkulator {
+	padding: 2rem 5rem;
+	background-color: whitesmoke;
+	text-align: center;
+}
+
+.hasil .hasil-kalkulator-container .hasil-kalkulator h3 {
+	margin: 10px 0;
+	font-size: 25px;
+}
+
+.hasil .hasil-kalkulator-container .hasil-kalkulator h1 {
+	margin: 10px 0;
+	font-size: 70px;
+}
+
+.hasil .penjelasan button {
+	margin: 10px;
+}
+
+.penyakit-container {
+	display: flex;
+	justify-content: center;
+	text-align: center;
+}
+
+.penyakit-container .penyakit {
+	padding: 10px 20px;
+	background-color: whitesmoke;
+}
+
+.penyakit-container .penyakit button {
+	margin: 10px 0;
+}
+
+footer {
+	display: flex;
+	justify-content: center;
+	text-align: center;
+}
+
+footer .footer-container img {
+	width: 200px;
+	object-fit: cover;
+}
+
+@media screen and (max-width: 992px) {
+	.fitur .keunggulan,
+	.fitur .deskripsi {
+		flex: 100%;
+	}
+}
+
+@media screen and (max-width: 576px) {
+	.kalkulator form {
+		padding: 2rem 3rem;
+		background-color: whitesmoke;
+	}
+	footer .footer-container {
+		display: flex;
+		justify-content: center;
+		text-align: center;
+		flex-direction: column;
+	}
+
+	footer .footer-container img {
+		margin: 10px;
+	}
+}

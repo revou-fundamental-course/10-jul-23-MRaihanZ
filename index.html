@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="assets/css/index.css" />
+		<title>Kalkulator BMI</title>
+	</head>
+	<body>
+		<header>
+			<h1>Kalkulator BMI</h1>
+			<p id="penjelasan-header">
+				Berat badan ideal adalah impian semua orang. Tidak hanya memiliki bentuk
+				tubuh yang menunjang penampilan, berat badan ideal juga menandakan
+				kondisi tubuh yang sehat. Bagaimana denganmu? Yuk, hitung sekarang di
+				Kalkulator BMI.
+			</p>
+		</header>
+		<main>
+			<section class="kalkulator">
+				<form action="/">
+					<div class="jenis-kelamin">
+						<p>Jenis Kelamin</p>
+						<input id="pria" name="jk" type="radio" value="pria" />
+						<label for="pria">Pria</label>
+						<input id="wanita" name="jk" type="radio" value="wanita" />
+						<label for="wanita">Wanita</label>
+					</div>
+					<div class="main">
+						<label for="bb">Berat Badan (kg)</label>
+						<input id="bb" name="bb" type="number" />
+						<label for="usia">Usia (tahun)</label>
+						<input id="usia" name="usia" type="number" />
+						<label for="tb">Tinggi badan (cm)</label>
+						<input id="tb" name="tb" type="number" />
+					</div>
+					<div class="submit">
+						<button id="btn_bmi" name="btn" type="button">Hitung BMI</button>
+						<button name="reset" type="reset">Reset</button>
+					</div>
+				</form>
+			</section>
+			<section id="fitur" class="fitur">
+				<div class="keunggulan">
+					<h4>Kunggulan Fitur</h4>
+					<ol>
+						<li>Menghitung berat badan</li>
+						<li>Menentukan kategori berat badan ideal atau tidak</li>
+						<li>Mempersiapkan program penurunan berat badan</li>
+					</ol>
+				</div>
+				<div class="deskripsi">
+					<p>
+						Kalkulator ini hanya boleh digunakan oleh orang dewasa (wanita hamil
+						atau menyusui tidak boleh mengandalkan pembacaan BMI ini) dan tidak
+						ada tindakan yang harus diambil berdasarkan nilainya selain
+						berkonsultasi dengan orang yang memenuhi syarat seperti dokter.
+					</p>
+					<p>
+						Kalkulator akan memberi Anda gambaran tentang perbandingan berat
+						badan Anda dengan nilai umum. Indek Massa Tubuh (atau BMI) dihitung
+						sebagai berat badan Anda (dalam Kilogram) dibagi dengan kuadrat
+						tinggi badan Anda (dalam meter) atau BMI = Kg/M².
+					</p>
+				</div>
+			</section>
+			<section id="hasil" class="hasil">
+				<div class="hasil-kalkulator-container">
+					<div class="hasil-kalkulator">
+						<h3 id="title-kalkulator"></h3>
+						<h1 id="total-kalkulator"></h1>
+						<h4>
+							Anda memiliki
+							<span id="penjelasan-kalkulator"></span>
+						</h4>
+						<button id="download-hasil-bmi">Download Hasil BMI</button>
+					</div>
+				</div>
+				<div class="penjelasan">
+					<p>Hasil BMI <span id="bmi-info"></span></p>
+					<p>Anda berada dalam kategori <span id="istilah"></span></p>
+					<p id="penjelasan-bmi"></p>
+					<div id="button-penjelasan">
+						<button>Konsultasi Ahli Gizi Via Aplikasi</button>
+						<button>Registrasi Online Ahli Gizi</button>
+					</div>
+
+					<p>
+						BMI tidak Sepenuhnya mewakili diagnosis menyeluruh dari kesehatan
+						tubuh dan resiko penyakit seseorang. Anda perlu konsultasi lebih
+						lanjut mengenai resiko dan kekhawatiran Anda terkait dengan berat
+						badan Anda.
+					</p>
+				</div>
+				<div id="penyakit-container" class="penyakit-container">
+					<div class="penyakit">
+						<p>
+							Beberapa penyakit yang berasal dari
+							<span id="istilah-penyakit"></span>
+						</p>
+						<p id="penyakit"></p>
+						<div id="button-penyakit">
+							<button>Konsultasi Dokter Via Aplikasi</button>
+							<button>Registrasi Online Sekarang</button>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+		<footer id="footer">
+			<div class="footer-container">
+				<p>Download Aplikasi</p>
+				<img src="assets/img/gps_badge-cutout.png" alt="Google Playstore" />
+				<img src="assets/img/as_badge.svg" alt="App Store" />
+			</div>
+		</footer>
+		<script src="assets/js/script.js"></script>
+	</body>
+</html>
